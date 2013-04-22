@@ -25,6 +25,8 @@ class KataController < ApplicationController
     @traffic_lights = @avatar.save_run_tests(visible_files, @output, inc)
     @visible_files = @avatar.visible_files
 
+    ::Broadcaster.broadcast inc[:colour]
+
     respond_to do |format|
       format.js if request.xhr?
     end      
