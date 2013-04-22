@@ -18,7 +18,7 @@ SimpleCov.start do
   
 end
 
-SimpleCov.root '/Users/jonjagger/Desktop/Repos/cyberdojo'
+SimpleCov.root ENV['PROJECT_ROOT'] || '/Users/jonjagger/Desktop/Repos/cyberdojo'
 
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
